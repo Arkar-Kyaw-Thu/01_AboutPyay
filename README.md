@@ -1,2 +1,2 @@
 # 01_AboutPyay
-Second Year (JavaScript Project)
+Second Year - First Sem (JavaScript Project)
