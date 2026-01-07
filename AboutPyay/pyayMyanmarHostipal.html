@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Our My Main Page</title>
+	<link rel="stylesheet" type="text/css" href="mainPage.css">
+	<style type="text/css">
+	.ilBlock{
+		display: inline-block;
+	}
+	</style>
+</head>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('Pyaymyanmar12.jpg');">
+	<input type="checkbox" id="check">
+		<label for="check">
+			<div id="btn"><img src="menu.png" width="30px" height="30px"></div>
+			<div id="cancle"><img src="cancle.png" width="30px" height="30px"></div>
+		</label>
+	<div class="sideBar">
+		
+		<header>Menu</header>
+		<div class="menuBar">
+			<ul>
+				<li><a href="mainPage.html">Home</a></li>
+				<li><a href="pyayMapPage.html" id="sideMenu1">Map</a></li>
+				<li><a href="famousPlacePage.html" id="sideMenu2">Famous Place</a></li>
+				<li><a href="restaurantPage.html" id="sideMenu3">Restaurant</a></li>
+				<li><a href="hotelPage.html" id="sideMenu4">Hotel</a></li>
+				<li><a href="hospitalPage.html" id="sideMenu5">Hospital</a></li>
+			</ul>
+		</div>
+		<div class="social">
+			<ul>
+				<li>
+					<a href="#"><img src="facebook.png" width="30px" height="30px"></a>
+					<a href="#"><img src="twitter.png" width="30px" height="30px"></a>
+					<a href="#"><img src="telegram.png" width="30px" height="30px"></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main" id="mainPage">
+		<div class="mainCover">
+			<div class="headBar">
+				<div class="logo">
+				
+				</div>
+				<div class="menu">
+					<ul>
+						<li id="pf" style="display: none;"><a href="#"><img src="profile.png" width="30px" height="30px"></a></a></li>
+						<li id="headMenu1"><a href="loginPage.html">Login</a></li>
+						<li id="headMenu2"><a href="signupPage.html">Signup</a></li>
+						<li><a href="aboutPage.html">About</a></li>
+						<li><a href="emergencyPage.html">SOS</a></li>
+						<li><a href="policeStation.html">Police</a></li>
+						<li><a href="triCyclePage.html">Tricycle</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="mainPage">
+				<div class="mainSelect">
+					<div class="selectImage"><img src="hotelksetralocation.webp" id="img1" width="100px" height="120px" onclick="showLocation()"></div>
+					<div class="selectImage"><img src="Pyaymyanmar19.jpg" id="img2" width="100px" height="120px" onclick="showDoctors()"></div>
+					<div class="selectImage"><img src="Pyaymyanmar12.jpg"  id="img3" width="100px" height="120px" onclick="showTimetable()"></div>
+					<div class="selectImage"><img src="Pyaymyanmar11.jpg" id="img4" width="100px" height="120px" onclick="showView()"></div>
+				</div>
+				<div class="mainContext">
+					<div class="mc">
+						<h1 id="mcHead">Pyay Myanmar Hospital</h1>
+						<p id="mcPara">
+							<h3>Contact Information</h3><br>
+							<table>
+							<tr>
+								<td>Address:</td>
+								<td>အမှတ်(၆၆၀)၊ကုန်သည်လမ်း၊ကျောင်းကြီးအိုးတန်းရပ်ကွက်၊ပြည်မြို့</td>
+							</tr>
+							<tr>
+								<td>Mobile:</td>
+								<td>+95 53 27 911</td>
+							</tr>
+							<tr>
+								<td>Email:</td>
+								<td>pyaymyanmarhospital@gmail.com</td>
+							</tr>
+						</table><br>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var img1=document.getElementById("img1");
+		img1.style.borderRadius="10px";
+		img1.style.boxShadow="0px 0px 20px gray";
+
+		var img2=document.getElementById("img2");
+		img2.style.borderRadius="10px";
+		img2.style.boxShadow="0px 0px 20px gray";
+
+		var img3=document.getElementById("img3");
+		img3.style.borderRadius="10px";
+		img3.style.boxShadow="0px 0px 20px gray";
+
+		var img4=document.getElementById("img4");
+		img4.style.borderRadius="10px";
+		img4.style.boxShadow="0px 0px 20px gray";
+
+		function showLocation(){
+			var num=window.open("PyayMyanmarLocation.html","Location","width=700px,height=400px,left=350px,top=300px");
+		}
+		function showDoctors(){
+			var num=window.open("PyayMyanmarDoctors.html","Location","width=700px,height=400px,left=350px,top=300px");
+		}
+		function showTimetable(){
+			var num=window.open("PyayMyanmarTimetable.html","Location","width=700px,height=400px,left=350px,top=300px");
+		}
+		function showView(){
+			var num=window.open("PyayMyanmarView.html","Location","width=700px,height=400px,left=350px,top=300px");
+		}
+
+var btn=document.getElementById("btn");
+btn.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="blur(5px)";
+	document.body.style.backdropFilter="blur(10px)";
+};
+var cancle=document.getElementById("cancle");
+cancle.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="";
+	document.body.style.backdropFilter="";
+};
+
+if(sessionStorage.length!=0){
+
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="visible";
+
+
+	var headMenu1=document.getElementById("headMenu1");
+	headMenu1.style.display="none";
+
+	var headMenu2=document.getElementById("headMenu2");
+	headMenu2.style.display="none";
+}
+else{
+
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="hidden";
+
+}
+	</script>
+</body>
+</html>
