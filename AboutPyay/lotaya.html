@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="mainPage.css">
+	<style type="text/css">
+		.ilblock{
+			content: "";
+			display: inline-block;
+			border: 1px solid black;
+			width: 30%;
+			padding: 5px;
+			border-radius: 20px;
+			margin-top: 2%;
+			margin-right: 9%;
+			margin-bottom: 2%;
+			margin-left: 9%;
+			box-shadow: 0 0 20px 1px;
+			background-image: url("th.jpg");
+		}
+		.ilblock table{
+			margin: 0 auto;
+		}
+		.orderBtn a{
+			border: 1px solid black;
+			font-size: 50px;
+			color: white;
+			margin-top: 5%;
+			margin-right: 5%;
+		}
+		.h{
+			text-align: center;
+		}
+	</style>
+</head>
+<body style="background: blanchedalmond;">
+	<input type="checkbox" id="check">
+		<label for="check">
+			<div id="btn"><img src="menu.png" width="30px" height="30px"></div>
+			<div id="cancle"><img src="cancle.png" width="30px" height="30px"></div>
+		</label>
+	<div class="sideBar">
+		
+		<header>Menu</header>
+		<div class="menuBar">
+			<ul>
+				<li><a href="mainPage.html">Home</a></li>
+				<li><a href="pyayMapPage.html" id="sideMenu1">Map</a></li>
+				<li><a href="famousPlacePage.html" id="sideMenu2">Famous Place</a></li>
+				<li><a href="restaurantPage.html" id="sideMenu3">Restaurant</a></li>
+				<li><a href="hotelPage.html" id="sideMenu4">Hotel</a></li>
+				<li><a href="hospitalPage.html" id="sideMenu5">Hospital</a></li>
+			</ul>
+		</div>
+		<div class="social">
+			<ul>
+				<li>
+					<a href="#"><img src="facebook.png" width="30px" height="30px"></a>
+					<a href="#"><img src="twitter.png" width="30px" height="30px"></a>
+					<a href="#"><img src="telegram.png" width="30px" height="30px"></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main" id="mainPage">
+		<div class="mainCover">
+			<div class="headBar">
+				<div class="logo">
+				
+				</div>
+				<div class="menu">
+					<ul>
+						<li id="pf" style="display: none;"><a href="#"><img src="profile.png" width="30px" height="30px"></a></a></li>
+						<li id="headMenu1"><a href="loginPage.html">Login</a></li>
+						<li id="headMenu2"><a href="signupPage.html">Signup</a></li>
+						<li><a href="aboutPage.html">About</a></li>
+						<li><a href="emergencyPage.html">SOS</a></li>
+						<li><a href="policeStation.html">Police</a></li>
+						<li><a href="triCyclePage.html">Tricycle</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div>
+				<button style="width: 40px; height: 40px; margin-left: 7%; background: transparent;border: none;"><a href="restaurantPage.html"><img src="exit.png" width="40px" height="40px"></a></button>
+				<center style="color: black;">
+					<img src="t1.jpg" width="150px" height="150px" style="border: 1px solid black;border-radius: 80px;"><br>
+					<h1>လိုတရ</h1>
+					<h1>Breakfast & Brunch Restaurant</h1>
+					<table>
+						<tr>
+							<td>Address:</td>
+							<td>ဆိုင်(၁)-ဗိုလ်ချုပ်လမ်း</td>
+							<td>/ဆိုင်(၂)-လမ်းမတော်</td>
+							<td>/ဆိုင်(၃)-ဆေးရုံနောက်ကျောလမ်း</td>
+						</tr>
+						<tr>
+							<td>Ph No</td>
+							<td>09 xxx xxx xxx</td>
+						</tr>
+					</table>
+				</center>
+				<hr>
+
+				<form name="myMenuForm">
+				
+				<div class="ilblock">
+					<h3 class="h">Menu</h3>
+						<table align="center">
+							<tr>
+								<td><input type="checkbox" name="smenu1" value="အီကြာကွေး" onchange="showQty()">အီကြာကွေး</td>
+								<td><input type="radio" name="smenu1rice" value="300">300</td>
+								<td id="qty1" style="visibility: hidden;">qty:<input type="text" name="smenu1Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu2" value="စမူဆာ" onchange="showQty()">စမူဆာ</td>
+								<td><input type="radio" name="smenu2Price" value="200">200</td>
+								<td id="qty2" style="visibility: hidden;">qty:<input type="text" name="smenu2Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu3" value="ပေါက်ဆီ" onchange="showQty()">ပေါက်ဆီ</td>
+								<td><input type="radio" name="smenu3Price" value="800">800</td>
+								<td id="qty3" style="visibility: hidden;">qty:<input type="text" name="smenu3Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu4" value="ပလာတာ" onchange="showQty()">ပလာတာ</td>
+								<td><input type="radio" name="smenu4Price" value="600">600</td>
+								<td id="qty4" style="visibility: hidden;">qty:<input type="text" name="smenu4Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu5" value="ကြက်ဥပလာတာ" onchange="showQty()">ကြက်ဥပလာတာ</td>
+								<td><input type="radio" name="smenu5Price" value="1000">1000</td>
+								<td id="qty5" style="visibility: hidden;">qty:<input type="text" name="smenu5Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu6" value="နန်းကြီးသုပ်" onchange="showQty()">နန်းကြီးသုပ်</td>
+								<td><input type="radio" name="smenu6Price" value="000">2000</td>
+								<td id="qty6" style="visibility: hidden;">qty:<input type="text" name="smenu6Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu7" value="ရှမ်းခေါက်ဆွဲ" onchange="showQty()">ရှမ်းခေါက်ဆွဲ</td>
+								<td><input type="radio" name="smenu7Price" value="000">2000</td>
+								<td id="qty7" style="visibility: hidden;">qty:<input type="text" name="smenu7Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu8" value="မုန့်ဟင်းခါး" onchange="showQty()">မုန့်ဟင်းခါး</td>
+								<td><input type="radio" name="smenu8Price" value="1500">1500</td>
+								<td id="qty8" style="visibility: hidden;">qty:<input type="text" name="smenu8Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu9" value="ထမင်းသုပ်" onchange="showQty()">ထမင်းသုပ်</td>
+								<td><input type="radio" name="smenu9Price" value="1500">1500</td>
+								<td id="qty9" style="visibility: hidden;">qty:<input type="text" name="smenu9Qty" value="1" size="2"></td>
+							</tr>
+								<tr>
+								<td><input type="checkbox" name="smenu10" value="ရွှေတောင်ခေါက်ဆွဲ" onchange="showQty()">ရွှေတောင်ခေါက်ဆွဲ</td>
+								<td><input type="radio" name="smenu10Price" value="1500">1500</td>
+								<td id="qty10" style="visibility: hidden;">qty:<input type="text" name="smenu10Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu11" value="အာလူးပူရီ" onchange="showQty()">အာလူးပူရီ</td>
+								<td><input type="radio" name="smenu11Price" value="2500">2500</td>
+								<td id="qty11" style="visibility: hidden;">qty:<input type="text" name="smenu11Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu12" value="တိုရှည်" onchange="showQty()">တိုရှည်</td>
+								<td><input type="radio" name="smenu12Price" value="1500">1500</td>
+								<td id="qty12" style="visibility: hidden;">qty:<input type="text" name="smenu12Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu13" value="ကြက်ဥတိုရှည်" onchange="showQty()">ကြက်ဥတိုရှည်</td>
+								<td><input type="radio" name="smenu13Price" value="2000">2000</td>
+								<td id="qty13" style="visibility: hidden;">qty:<input type="text" name="smenu13Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu14" value="ချာပါတီ" onchange="showQty()">ချာပါတီ</td>
+								<td><input type="radio" name="smenu14Price" value="2500">2500</td>
+								<td id="qty14" style="visibility: hidden;">qty:<input type="text" name="smenu14Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu15" value="နို့စိမ်းခေါက်ဆွဲ" onchange="showQty()">နို့စိမ်းခေါက်ဆွဲ</td>
+								<td><input type="radio" name="smenu15Price" value="1500">1500</td>
+								<td id="qty15" style="visibility: hidden;">qty:<input type="text" name="smenu15Qty" value="1" size="2"></td>
+							</tr>
+						</table>
+				</div>
+				<div class="ilblock">
+					<h3 class="h">Drink Menu</h3>
+						<table align="center">
+							<tr>
+								<td><input type="checkbox" name="smenu16" value="စပျစ်သီးဖျော်ရည်" onchange="showQty()">စပျစ်သီးဖျော်ရည်</td>
+								<td><input type="radio" name="smenu16Price" value="15000">1500</td>
+								<td id="qty16" style="visibility: hidden;">qty:<input type="text" name="smenu16Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu17" value="စတော်ဘယ်ရီဖျော်ရည်" onchange="showQty()">စတော်ဘယ်ရီဖျော်ရည်</td>
+								<td><input type="radio" name="smenu17Price" value="2500">2500</td>
+								<td id="qty17" style="visibility: hidden;">qty:<input type="text" name="smenu18Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu18" value="သံပုရာသီးဖျော်ရည်" onchange="showQty()">သံပုရာသီးဖျော်ရည်</td>
+								<td><input type="radio" name="smenu18Price" value="1000">1000</td>
+								<td id="qty18" style="visibility: hidden;">qty:<input type="text" name="smenu18Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu19" value="လိမ်မော်သီးဖျော်ရည်" onchange="showQty()">လိမ်မော်သီးဖျော်ရည်</td>
+								<td><input type="radio" name="smenu19Price" value="2000">2000</td>
+								<td id="qty19" style="visibility: hidden;">qty:<input type="text" name="smenu19Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu20" value="သဘာဝသီးစုံဖျော်ရည်" onchange="showQty()">သဘာဝသီးစုံဖျော်ရည်</td>
+								<td><input type="radio" name="smenu20Price" value="3000">3000</td>
+								<td id="qty20" style="visibility: hidden;">qty:<input type="text" name="smenu20Qty" value="1" size="2"></td>
+							</tr>
+							
+								<td><input type="checkbox" name="smenu21" value="ငှက်ပျောသီးဖျော်ရည်" onchange="showQty()">ငှက်ပျောသီးဖျော်ရည်</td>
+								<td><input type="radio" name="smenu21Price" value="1000">1000</td>
+								<td id="qty21" style="visibility: hidden;">qty:<input type="text" name="smenu21Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu22" value="ထောပတ်သီးဖျော်ရည်" onchange="showQty()">ထောပတ်သီးဖျော်ရည်</td>
+								<td><input type="radio" name="smenu22Price" value="3000">3000</td>
+								<td id="qty22" style="visibility: hidden;">qty:<input type="text" name="smenu22Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu23" value="လက်ဖက်ရည်" onchange="showQty()">လက်ဖက်ရည်</td>
+								<td><input type="radio" name="smenu23Price" value="1000">1000</td>
+								<td id="qty23" style="visibility: hidden;">qty:<input type="text" name="smenu23Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu24" value="ကော်ဖီ" onchange="showQty()">ကော်ဖီ</td>
+								<td><input type="radio" name="smenu24Price" value="1000">1000</td>
+								<td id="qty24" style="visibility: hidden;">qty:<input type="text" name="smenu24Qty" value="1" size="2"></td>
+							<tr>
+						</table>
+				</div>
+
+
+				<div class="ilblock">
+					<h3 class="h">Menu</h3>
+						<table align="center">
+							<tr>
+								<td><input type="checkbox" name="smenu25" value="ခေါက်ဆွဲကြော်(ကြက်/ဝက်)" onchange="showQty()">ခေါက်ဆွဲကြော်(ကြက်/ဝက်)</td>
+								<td><input type="radio" name="smenu25Price" value="3000">3000</td>
+								<td id="qty25" style="visibility: hidden;">qty:<input type="text" name="smenu25Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu26" value="ကြာဇံကြော်(ကြက်/ဝက်)" onchange="showQty()">ကြာဇံကြော်(ကြက်/ဝက်)</td>
+								<td><input type="radio" name="smenu26Price" value="3000">3000</td>
+								<td id="qty26" style="visibility: hidden;">qty:<input type="text" name="smenu26Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu27" value="ပသျှူးကြော်(ကြက်/ဝက်)" onchange="showQty()">ပသျှူးကြော်(ကြက်/ဝက်)</td>
+								<td><input type="radio" name="smenu27Price" value="3000">3000</td>
+								<td id="qty27" style="visibility: hidden;">qty:<input type="text" name="smenu27Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu28" value="အစိမ်းကြော်" onchange="showQty()">အစိမ်းကြော်</td>
+								<td><input type="radio" name="smenu28Price" value="2500">2500</td>
+								<td id="qty28" style="visibility: hidden;">qty:<input type="text" name="smenu28Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu29" value="ကြက်ကုန်းဘောင်ထမင်း" onchange="showQty()">ကြက်ကုန်းဘောင်ထမင်း</td>
+								<td><input type="radio" name="smenu29Price" value="3000">3000</td>
+								<td id="qty29" style="visibility: hidden;">qty:<input type="text" name="smenu29Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu30" value="စင်းကောထမင်း" onchange="showQty()">စင်းကောထမင်း</td>
+								<td><input type="radio" name="smenu30Price" value="3000">3000</td>
+								<td id="qty30" style="visibility: hidden;">qty:<input type="text" name="smenu30Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu31" value="ငံစပ်ထမင်း" onchange="showQty()">ငံစပ်ထမင်း</td>
+								<td><input type="radio" name="smenu31Price" value="1500">1500</td>
+								<td id="qty31" style="visibility: hidden;">qty:<input type="text" name="smenu31Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu32" value="နံရိုးပေါင်းထမင်း" onchange="showQty()">နံရိုးပေါင်းထမင်း</td>
+								<td><input type="radio" name="smenu32Price" value="4000">4000</td>
+								<td id="qty32" style="visibility: hidden;">qty:<input type="text" name="smenu32Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu33" value="ငရုတ်ကောင်းမွှေးထမင်း" onchange="showQty()">ငရုတ်ကောင်းမွှေးထမင်း</td>
+								<td><input type="radio" name="smenu33Price" value="1500">1500</td>
+								<td id="qty33" style="visibility: hidden;">qty:<input type="text" name="smenu33Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu34" value="ခရုဆီထမင်း" onchange="showQty()">ခရုဆီထမင်း</td>
+								<td><input type="radio" name="smenu34Price" value="1500">1500</td>
+								<td id="qty34" style="visibility: hidden;">qty:<input type="text" name="smenu34Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu35" value="ဝက်လက်ထမင်းပေါင်း" onchange="showQty()">ဝက်လက်ထမင်းပေါင်း</td>
+								<td><input type="radio" name="smenu35Price" value="3500">3500</td>
+								<td id="qty35" style="visibility: hidden;">qty:<input type="text" name="smenu35Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu36" value="ဂဏန်းထမင်းပေါင်း" onchange="showQty()">ဂဏန်းထမင်းပေါင်း</td>
+								<td><input type="radio" name="smenu36Price" value="3500">3500</td>
+								<td id="qty36" style="visibility: hidden;">qty:<input type="text" name="smenu36Qty" value="1" size="2"></td>
+							</tr>
+							
+						</table>
+				</div>
+
+				<div class="ilblock">
+					<h3 class="h">Menu</h3>
+						<table align="center">
+							<tr>
+								<td><input type="checkbox" name="smenu37" value="ဒင်းဆမ်း" onchange="showQty()">ဒင်းဆမ်း</td>
+								<td><input type="radio" name="smenu37Price" value="1000">1000</td>
+								<td id="qty37" style="visibility: hidden;">qty:<input type="text" name="smenu37Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu38" value="ကြေးအိုး" onchange="showQty()">ကြေးအိုး</td>
+								<td><input type="radio" name="smenu38Price" value="3000">3000</td>
+								<td id="qty38" style="visibility: hidden;">qty:<input type="text" name="smenu38Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu39" value="ကြက်သားလုံးကြော်" onchange="showQty()">ကြက်သားလုံးကြော်</td>
+								<td><input type="radio" name="smenu39Price" value="3500">3500</td>
+								<td id="qty39" style="visibility: hidden;">qty:<input type="text" name="smenu39Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu40" value="ငါးသံပုရာပေါင်း" onchange="showQty()">ငါးသံပုရာပေါင်း</td>
+								<td><input type="radio" name="smenu40Price" value="8000">8000</td>
+								<td id="qty40" style="visibility: hidden;">qty:<input type="text" name="smenu40Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu41" value="ယိုးဒယားငါးပေါင်း" onchange="showQty()">ယိုးဒယားငါးပေါင်း</td>
+								<td><input type="radio" name="smenu41Price" value="8000">8000</td>
+								<td id="qty41" style="visibility: hidden;">qty:<input type="text" name="smenu41Qty" value="1" size="2"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="smenu42" value="ယိုးဒယားငါးမာလာ" onchange="showQty()">ယိုးဒယားငါးမာလာ</td>
+								<td><input type="radio" name="smenu42Price" value="8500">8500</td>
+								<td id="qty42" style="visibility: hidden;">qty:<input type="text" name="smenu42Qty" value="1" size="2"></td>
+							</tr>
+							
+							
+						</table>
+				</div>
+
+
+
+				<hr>
+				<div align="center" class="orderBtn">
+					<input type="submit" value="order" onclick="orderMenuList()" style="width: 100px; height: 30px; margin-top: 3%; margin-bottom: 3%;">
+				</div>
+				</form>
+
+			</div>
+
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function showQty(){
+			for(var i=0;i<42;i++){
+				var a=1+i;
+				if(document.forms["myMenuForm"].elements["smenu"+a].checked){
+					//document.forms["myMenuForm"].elements["smenu"+a+"Price"].checked;
+					document.getElementById("qty"+a).style.visibility="visible";
+				}
+				else{
+					document.getElementById("qty"+a).style.visibility="hidden";
+				}
+			}
+		}
+var btn=document.getElementById("btn");
+btn.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="blur(5px)";
+	document.body.style.backdropFilter="blur(10px)";
+};
+var cancle=document.getElementById("cancle");
+cancle.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="";
+	document.body.style.backdropFilter="";
+};
+		function orderMenuList(){
+			var menuList=[];
+			var menuPrice=[];
+			var menuQty=[];
+			var menutotal=[];
+			var total=0;
+			for(var i=0;i<42;i++){
+				var a=1+i;
+				if(document.forms["myMenuForm"].elements["smenu"+a].checked){
+					var menu=document.forms["myMenuForm"].elements["smenu"+a].value;
+					var price=document.forms["myMenuForm"].elements["smenu"+a+"Price"].value
+					var qty=document.forms["myMenuForm"].elements["smenu"+a+"Qty"].value;
+					menuList.push(menu);
+					menuPrice.push(price);
+					menuQty.push(qty);
+					var itemTotal=parseInt(price)*parseInt(qty);
+					menutotal.push(itemTotal);
+					total+=itemTotal;
+				}
+			}
+
+			document.write("<center>");
+			document.write("<table  style='width:50%;box-shadow: 0 0 20px black; margin-top: 10%;'>")
+			document.write("<tr style='border:none; text-align:center;'><td colspan='4'><h1>Your order Menu</h1></td></tr>");
+			document.write("<tr><td>Menu</td><td>Price</td><td>Qty</td><td>total</td></tr>");
+			for(var i=0;i<menuList.length;i++){
+				document.write("<tr><td>"+menuList[i]+"</td><td>"+menuPrice[i]+"</td><td>"+menuQty[i]+"</td><td>"+menutotal[i]+"</td><tr>");
+			}
+			document.write("<tr><td colspan='3'>total cost</td><td>"+total+"</td><tr>");
+			document.write("</table><br>");
+			document.write("<table><tr><td>Name</td><td><input type='text' placeholder='name'></td><tr>");
+			document.write("<tr><td>Phone</td><td><input type='text' placeholder='phone'></td><tr>");
+			document.write("<tr><td>Address</td><td><input type='text' placeholder='address'></td><tr></table>");
+			document.write("<a href='lotaya.html' style='border: 1px solid black;font-size: 20px;color: black;text-decoration: none; background:lightsalmon;'>Back</a>");
+			document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+			document.write("<a href='lotaya.html' style='border: 1px solid black;font-size: 20px;color: black;text-decoration: none; background:lightsalmon;' onclick='result()'>Order</a>");
+			document.write("<center>");
+		}
+		function result(){
+			alert("order successful");
+		}
+if(sessionStorage.length!=0){
+
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="visible";
+
+
+	var headMenu1=document.getElementById("headMenu1");
+	headMenu1.style.display="none";
+
+	var headMenu2=document.getElementById("headMenu2");
+	headMenu2.style.display="none";
+}
+else{
+
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="hidden";
+
+}
+	</script>
+</body>
+</html>

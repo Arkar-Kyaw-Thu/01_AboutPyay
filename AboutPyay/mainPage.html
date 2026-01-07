@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Our My Main Page</title>
+	<link rel="stylesheet" type="text/css" href="mainPage.css">
+</head>
+<body onload="pyayInfo()">
+	<input type="checkbox" id="check">
+		<label for="check">
+			<div id="btn"><img src="menu.png" width="30px" height="30px"></div>
+			<div id="cancle"><img src="cancle.png" width="30px" height="30px"></div>
+		</label>
+	<div class="sideBar">
+		
+		<header>Menu</header>
+		<div class="menuBar">
+			<ul>
+				<li><a href="mainPage.html">Home</a></li>
+				<li><a href="pyayMapPage.html" id="sideMenu1">Map</a></li>
+				<li><a href="famousPlacePage.html" id="sideMenu2">Famous Place</a></li>
+				<li><a href="restaurantPage.html" id="sideMenu3">Restaurant</a></li>
+				<li><a href="hotelPage.html" id="sideMenu4">Hotel</a></li>
+				<li><a href="hospitalPage.html" id="sideMenu5">Hospital</a></li>
+			</ul>
+		</div>
+		<div class="social">
+			<ul>
+				<li>
+					<a href="#"><img src="facebook.png" width="30px" height="30px"></a>
+					<a href="#"><img src="twitter.png" width="30px" height="30px"></a>
+					<a href="#"><img src="telegram.png" width="30px" height="30px"></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main" id="mainPage">
+		<div class="mainCover">
+			<div class="headBar">
+				<div class="logo">
+				
+				</div>
+				<div class="menu">
+					<ul>
+						<li id="pf" style="display: none;"><a href="#"><img src="profile.png" width="30px" height="30px"></a></a></li>
+						<li id="headMenu1"><a href="loginPage.html">Login</a></li>
+						<li id="headMenu2"><a href="signupPage.html">Signup</a></li>
+						<li><a href="aboutPage.html">About</a></li>
+						<li><a href="emergencyPage.html">SOS</a></li>
+						<li><a href="policeStation.html">Police</a></li>
+						<li><a href="triCyclePage.html">Tricycle</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="mainPage">
+				<div class="mainSelect">
+					<div class="selectImage"><img src="pyayImg.jpg" id="img1" width="100px" height="120px" onclick="pyayInfo()"></div>
+					<div class="selectImage"><img src="minGyiTaungWp.jpg" id="img2" width="100px" height="120px" onclick="minGyiTaungInfo()"></div>
+					<div class="selectImage"><img src="sriksetraImg.jpg" id="img3" width="100px" height="120px" onclick="sriksetraInfo()"></div>
+					<div class="selectImage"><img src="nawaday.webp"  id="img4" width="100px" height="120px" onclick="nawadayBridge()"></div>
+					<div class="selectImage"><img src="shwesandawPagodaImg.jpg" id="img5" width="100px" height="120px" onclick="shwesandawPagada()"></div>
+				</div>
+				<div class="mainContext">
+					<div class="mc">
+						<h1 id="mcHead"></h1>
+						<p id="mcPara" style="font-size: 18px;"></p><br><br>
+						<a id="a">view detail...</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div>
+				</div>
+				<div></div>
+				<div align="center">Copyright © 2023 guideFORpyay.com Travel Pyay, All rights reserved| 
+Site Operator: guideFORpyay.com Travel Pyay Pte. Ltd.</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var img1=document.getElementById("img1");
+		img1.style.borderRadius="10px";
+		img1.style.boxShadow="0px 0px 20px gray";
+
+		var img2=document.getElementById("img2");
+		img2.style.borderRadius="10px";
+		img2.style.boxShadow="0px 0px 20px gray";
+
+		var img3=document.getElementById("img3");
+		img3.style.borderRadius="10px";
+		img3.style.boxShadow="0px 0px 20px gray";
+
+		var img4=document.getElementById("img4");
+		img4.style.borderRadius="10px";
+		img4.style.boxShadow="0px 0px 20px gray";
+
+		var img5=document.getElementById("img5");
+		img5.style.borderRadius="10px";
+		img5.style.boxShadow="0px 0px 20px gray";
+
+		function pyayInfo(){
+			var h=document.getElementById("mcHead");
+			var p=document.getElementById("mcPara");
+			h.innerHTML="Pyay";
+			p.innerHTML="Pyay is the principal town of Pyay Township in the Bago Region in Myanmar. Pyay is located on the bank of the Irrawaddy River, 260 km north-west of Yangon. It is an important trade center for the Ayeyarwady Delta, Central and Upper Myanmar and the Rakhine State.";
+			document.body.style.backgroundImage="linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('pyay.jpg')";
+
+			var a=document.getElementById("a");
+			a.href="https://en.wikipedia.org/wiki/Pyay";
+			a.style.color="white";
+			a.style.fontSize="30px";
+			a.style.border="1px solid transpant";
+		}
+		function shwesandawPagada(){
+			var h=document.getElementById("mcHead");
+			var p=document.getElementById("mcPara");
+			h.innerHTML="ShweSanDaw Pagoda";
+			p.innerHTML="The Shwesandaw Pagoda, or Shwesandaw Paya is a Buddhist pagoda in the center of Pyay, Burma. It is one of the more important Buddhist pilgrimage locations in Burma. It is said to contain a couple of the Lord Buddha's hairs, as its name means Golden Hair Relic.";
+			document.body.style.backgroundImage="linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('mainWp1.jpg')";
+
+			var a=document.getElementById("a");
+			a.href="https://my.m.wikipedia.org/wiki/%E1%80%9B%E1%80%BD%E1%80%BE%E1%80%B1%E1%80%86%E1%80%B6%E1%80%90%E1%80%B1%E1%80%AC%E1%80%BA%E1%80%98%E1%80%AF%E1%80%9B%E1%80%AC%E1%80%B8_(%E1%80%95%E1%80%BC%E1%80%8A%E1%80%BA)";
+			a.style.color="white";
+			a.style.fontSize="30px";
+			a.style.border="1px solid transpant";
+		}
+		function nawadayBridge(){
+			var h=document.getElementById("mcHead");
+			var p=document.getElementById("mcPara");
+			h.innerHTML="Nawaday Bridge";
+			p.innerHTML="This bridge is connecting between two township of Pyay and Padaung across Ayeyarwaddy river by setting up steel truss bridge .It is about 4183 feet long distance .In the evening ,can see the sunset view with this bridge ,very nice scenes.It is opened on 24 hours .Before this bridge construction,people is used by boat for a long time.If you visit to Pyay(Prome) ,it must see place.";
+			document.body.style.backgroundImage="linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('nawadayBridge1.jpg')";
+
+			var a=document.getElementById("a");
+			a.href="https://www.tripadvisor.com/Attraction_Review-g739121-d15595159-Reviews-Nawaday_Bridge-Pyay_Bago_Region.html";
+			a.style.color="white";
+			a.style.fontSize="30px";
+			a.style.border="1px solid transpant";
+		}
+		function sriksetraInfo(){
+			var h=document.getElementById("mcHead");
+			var p=document.getElementById("mcPara");
+			h.innerHTML="Sri Ksetra";
+			p.innerHTML="Also known as Sri Ksetra, Thayekhittaya was the capital of a Pyu kingdom from the fifth to ninth centuries and was eventually sacked by a Bagan king in the 11th century. As with Bagan, the ruins are in a pretty parlous state with reconstructions leaving it a little difficult to imagine what the original monuments actually looked like. Sri Ksetra, located along the Irrawaddy River at present-day Hmawza, was once a prominent Pyu settlement.";
+			document.body.style.backgroundImage="linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('sriksetra.jpg')";
+
+			var a=document.getElementById("a");
+			a.href="https://en.wikipedia.org/wiki/Sri_Ksetra_Kingdom";
+			a.style.color="white";
+			a.style.fontSize="30px";
+			a.style.border="1px solid transpant";
+		}
+		function minGyiTaungInfo(){
+			var h=document.getElementById("mcHead");
+			var p=document.getElementById("mcPara");
+			h.innerHTML="About Mingyi Taung";
+			p.innerHTML="Mingyi Taung (Hill of King) is where the story or Sri Ksetra began. It is the birth place of Beydayi whose son, King Duttabaung established an ancient Pyu capital of Sriketra (1 to 5 AD).";
+			document.body.style.backgroundImage="linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('minGyiTaungWp.jpg')";
+
+			var a=document.getElementById("a");
+			a.href="https://en.wikipedia.org/wiki/Mingyi_Swa_of_Prome";
+			a.style.color="white";
+			a.style.fontSize="30px";
+			a.style.border="1px solid transpant";
+		}
+var btn=document.getElementById("btn");
+btn.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="blur(5px)";
+	document.body.style.backdropFilter="blur(10px)";
+};
+var cancle=document.getElementById("cancle");
+cancle.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="";
+	document.body.style.backdropFilter="";
+};
+if(sessionStorage.length!=0){
+
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="visible";
+
+
+	var headMenu1=document.getElementById("headMenu1");
+	headMenu1.style.display="none";
+
+	var headMenu2=document.getElementById("headMenu2");
+	headMenu2.style.display="none";
+}
+else{
+
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="hidden";
+
+}
+	</script>
+</body>
+</html>

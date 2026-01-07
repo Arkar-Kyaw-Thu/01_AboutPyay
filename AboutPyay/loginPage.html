@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+        width: 100%;
+        height: 100%;
+        color: lightseagreen;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    .loginForm{
+    	border: 1px solid black;
+    	border-radius: 10px;
+    	box-shadow: 1px;
+    	width: 30%;
+    	height: 50%;
+    	margin: 10% auto;
+    	background: floralwhite;
+    }
+	</style>
+</head>
+<body>
+	<div class="loginForm">
+		<h1 align="center">Login For Our Wedsite</h1>
+		<form name="f1" id="f1" method="post" action="mainPage.html">
+			<table cellspacing="20px" align="center">
+				<tr>
+					<td>UserName:</td>
+					<td><input type="text" name="n1" placeholder="UserName" required></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="Password" name="p1" placeholder="pyay123" required pattern="pyay123"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" value="login" style="width: 70px;height: 30px; background: lightseagreen;" onclick="sUser()">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="reset" value="cancle" style="width: 70px;height: 30px; background: lightseagreen;">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script type="text/javascript">
+		function sUser(){
+			var name=document.forms[0].elements["n1"].value;
+			sessionStorage.setItem("name",name);
+		}
+		function login(){
+			var password=document.forms[0].elements["p1"].value;
+			if(password=="pyay123"){
+				sessionUser();
+				var form1=document.getElementById("f1");
+				form1.action="mainPage.html";
+				alert("login successful");
+			}
+			else{
+				var form1=document.getElementById("f1");
+				form1.action="loginPage.html";
+			}
+		}
+	</script>
+</body>
+</html>

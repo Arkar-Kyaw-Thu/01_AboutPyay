@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.form{
+			background-color: white;
+			border: 1px solid black;
+			border-radius: 20px;
+			box-shadow: 0 0 20px black;
+			width: 40%;
+			text-align: center;
+			margin: 10% auto;
+			padding: 30px;
+		}
+		.form input[type="submit"]:hover{
+			border-bottom: 5px;
+			transition: .5s;
+		}
+	</style>
+</head>
+<body style="background-color: lightseagreen;"  onload="callData()">
+	<div class="form">
+		<form action="hotelPage.html">
+			<h2>Your information</h2>
+			<table align="center" cellspacing="10px">
+				<tr>
+					<td>Name:</td>
+					<td colspan="2" id="name"></td>
+				</tr>
+				<tr>
+					<td>NRC:</td>
+					<td colspan="2" id="nrc"></td>
+				</tr>
+				<tr>
+					<td>Telephone:</td>
+					<td colspan="2" id="phone"></td>
+				</tr>
+				<tr>
+					<td>Address:</td>
+					<td colspan="2" id="address"></td>
+				</tr>
+				<tr>
+					<td colspan="3"><h3>Your booking</h3></td>
+				</tr>
+				<tr>
+					<td>Room</td>
+					<td>Adults</td>
+					<td>Children</td>
+				</tr>
+				<tr>
+					<td id="room"></td>
+					<td id="adults"></td>
+					<td id="children"></td>
+				</tr>
+				<tr>
+					<td>CheckIn Date:</td>
+					<td colspan="2" id="checkin"></td>
+				</tr>
+				<tr>
+					<td>CheckOut Date:</td>
+					<td colspan="2" id="checkout"></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<center><input type="submit" value="Ok" style="background-color:lightseagreen;width: 100px;height: 30px;transition: .5s;" onclick="clearData()"></center>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script type="text/javascript">
+		function clearData(){
+			localStorage.clear();
+		}
+		function callData(){
+			var name=document.getElementById("name");
+			name.innerHTML=localStorage.getItem("Name");
+
+			var nrc=document.getElementById("nrc");
+			nrc.innerHTML=localStorage.getItem("NRC");
+
+			var phone=document.getElementById("phone");
+			phone.innerHTML=localStorage.getItem("Phone");
+
+			var address=document.getElementById("address");
+			address.innerHTML=localStorage.getItem("Address");
+
+			var room=document.getElementById("room");
+			room.innerHTML=localStorage.getItem("Room");
+
+			var adluts=document.getElementById("adults");
+			adults.innerHTML=localStorage.getItem("Adults");
+
+			var children=document.getElementById("children");
+			children.innerHTML=localStorage.getItem("Children");
+
+			var checkin=document.getElementById("checkin");
+			checkin.innerHTML=localStorage.getItem("CheckIn");
+
+			var checkout=document.getElementById("checkout");
+			checkout.innerHTML=localStorage.getItem("CheckOut");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+body{
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	color: gray;
+}
+.sideBar{
+	position: fixed;
+	left: -250px;
+	width: 250px;
+	height: 100%;
+	background-color: transparent;
+	transition: all .5s ease;
+}
+.sideBar header{
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	line-height: 70px;
+	background-color: transparent;
+	user-select: none;
+}
+.sideBar .menuBar ul a{
+	display: block;
+	height: 100%;
+	color: white;
+	width: 100%;
+	line-height: 65px;
+	font-size: 20px;
+	padding-left: 40px;
+	box-sizing: border-box;
+	border-top: 1px solid rgba(255,255,255,.1);
+	border-bottom: 1px solid black;
+	transition: .4s;
+}
+.menuBar ul li:hover{
+	padding-left: 50px;
+}
+.sideBar .menuBar ul li{
+	margin-right: 16px;
+}
+.sideBar .social ul li a{
+	display: inline-block;
+	height: 100%;
+	font-weight: 100%;
+	padding: 20px;
+	margin-left: 6px;
+	border: 1px solid transparent;
+	transition: .4s;
+}
+#check{
+	display: none;
+}
+label #btn,label #cancle{
+	position: absolute;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 3px;
+}
+label #btn{
+	left: 30px;
+	top: 18px;
+	font-size: 20px;
+	color: black;
+	padding: 10px;
+}
+label #cancle{
+	position: fixed;
+	z-index: 1111;
+	left: -195px;
+	top: 12px;
+	font-size: 30px;
+	color: white;
+	padding: 4px 9px;
+	transition: all .5s ease;
+}
+label #btn:hover{
+	background-color: whitesmoke;
+	transition: all 1s;
+}
+label #cancle:hover{
+	background-color: whitesmoke;
+	transition: all 1s;
+}
+#check:checked ~ .sideBar{
+	left: 0;
+}
+#check:checked ~ label #btn{
+	left: 250px;
+	opacity: 0;
+	pointer-events: none;
+}
+#check:checked ~ label #cancle{
+	left: 195px;
+}
+
+.main{
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	background-position: center;
+	transition: all.5s;
+}
+#check:checked ~ .main{
+	margin-left: 250px;
+	transition: all.5s;
+}
+
+.headBar{
+	height: 12%;
+	font-size: 20px;
+	color: white;
+	background-color: transparent;
+	border-bottom: 1px solid transparent;
+}
+.headBar .menu ul li a{
+	color: white;
+	position: relative;
+	float: right;
+	text-align: center;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	padding-top: 3px;
+	width: 90px;
+	height: 33px;
+	margin-top: 30px;
+	margin-right: 15px;
+}
+.menu ul li a:hover{
+	background-color: whitesmoke;
+	transition: all 2s;
+}
+
+.mainCover{
+	color: white;
+	border: 1px solid transparent;
+	width: 100%;
+	height: 100%;
+}
+.mainPage{
+	width: 100%;
+	height: 70%;
+	border: 1px solid transparent;
+}
+.mainPage .mainContext{
+	border: 1px solid transparent;
+	width: 49%;
+	height: 99%;
+}
+.mainContext .mc{
+	margin-left: 5%;
+	margin-top: 20%;
+}
+.mc p{
+	margin-top: 7%;
+	line-height: 20px;
+}
+.mainPage .mainSelect{
+	position: relative;
+	float: right;
+	border: 1px solid transparent;
+	width: 49%;
+	margin-top: 25%;
+}
+.mainSelect .selectImage{
+	display: inline-block;
+	float: right;
+	margin-right: 20px;
+}
+.footer{
+	position: relative;
+	border: 1px solid transparent;
+	width: 100%;
+	margin-top: 5%;
+}

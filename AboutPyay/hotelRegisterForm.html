@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.form{
+			background-color: white;
+			border: 1px solid black;
+			border-radius: 20px;
+			box-shadow: 0 0 20px black;
+			width: 40%;
+			text-align: center;
+			margin: 10% auto;
+			padding: 30px;
+		}
+		.form input[type="submit"]:hover{
+			border-bottom: 5px;
+			transition: .5s;
+		}
+	</style>
+</head>
+<body style="background-color: lightseagreen;">
+	<div class="form">
+		<form action="yourForm.html">
+			<h2>Please fill your information</h2>
+			<table align="center" cellspacing="10px">
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" placeholder="Enter your name" name="name" autocomplete="off" required/></td>
+				</tr>
+				<tr>
+					<td>NRC:</td>
+					<td><input type="text" placeholder="-/------(N)------" name="nrc" autocomplete="off" required pattern="[0-9]{1,2}\/[A-Za-z]{6}\(N\)[0-9]{6}"></td>
+				</tr>
+				<tr>
+					<td>Telephone:</td>
+					<td><input type="text" placeholder="Enter your phone number" name="phone" autocomplete="off" required pattern="^(09|\+959)([1-9]\d{7,9})"></td>
+				</tr>
+				<tr>
+					<td>Address:</td>
+					<td><input type="text" placeholder="Enter your address" name="address" autocomplete="off" required/></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<center><input type="submit" value="register" style="background-color:lightseagreen;width: 100px;height: 30px;transition: .5s;" onclick="addData()"></center>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script type="text/javascript">
+		function addData(){
+			var name=document.forms[0].elements["name"].value;
+			localStorage.setItem("Name",name);
+		
+			var nrc=document.forms[0].elements["nrc"].value;
+			localStorage.setItem("NRC",nrc);
+		
+			var phone=document.forms[0].elements["phone"].value;
+			localStorage.setItem("Phone",phone);
+		
+			var address=document.forms[0].elements["address"].value;
+			localStorage.setItem("Address",address);
+		}
+	</script>
+</body>
+</html>

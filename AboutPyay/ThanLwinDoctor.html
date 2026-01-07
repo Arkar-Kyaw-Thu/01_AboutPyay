@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #007acc;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .specialty {
+            color: #007acc;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>အထူးကုဆရာဝန်ကြီးများ</h1>
+    </header>
+    <div class="container">
+        <ul id="doctor-list">
+         
+        </ul>
+    </div>
+
+    <script>
+        
+        var doctors = [
+            { name: "ဒေါက်တာတင်မောင်ရီ (ခွဲစိတ်အထူးကုဆရာဝန်ကြီး)", specialty: "M.B.,B.S,M.Med.Sc(Surg)" },
+            { name: "ဒေါက်တာထွန်းသန်း (ခွဲစိတ်အထူးကုဆရာဝန်ကြီး)", specialty: "M.B.,B.S,M.Med.Sc(Surg)" },
+            { name: "ဒေါက်တာအောင်မျိုးတင့် (ခွဲစိတ်အထူးကုဆရာဝန်)", specialty: "M.B.,B.S,M.Med.Sc(Surg)" },
+            { name: "ဒေါက်တာစိုးလင်း (တိုင်း အရိုး၊ အကြော၊ အဆစ်၊ ထိခိုက်ဒဏ်ရာ အထူးကုဆရာဝန်ကြီး)", specialty: "M.B.,B.S , M.Med.Sc(Ortho)" },
+            { name: "ဒေါက်တာစိုးလှနောင် (အရိုး၊ အကြော၊ အဆစ်၊ ထိခိုက်ဒဏ်ရာ အထူးကုဆရာဝန်ကြီး)", specialty: "M.B.,B.S , M.Med.Sc(Ortho)" },
+            { name: "ဒေါက်တာမြင့်သန်းထွန်း (အရိုး၊ အကြော၊ အဆစ် နှင့် ထိခိုက်ဒဏ်ရာ တိုင်းအထူးကုဆရာဝန်ကြီး)", specialty: "M.B.,B.S , M.Med.Sc(Ortho)" },
+            { name: "ဒေါက်တာခင်မောင်ညွှန့် (တိုင်းအထွေထွေရောဂါကု သမားတော်ကြီး)", specialty: "M.B.,B.S,M.Med.Sc(Internal medicine)" },
+            { name: "ဒေါက်တာခင်အုန်းတင့် (တိုင်းအထူးကု သမားတော်ကြီး)", specialty: "M.B.,B.S,M.Med.Sc(Internal medicine)" },
+            { name: "ဒေါက်တာသောင်းထွဋ် (အထွေထွေရောဂါကု သမားတော်ကြီး)", specialty: "M.B.,B.S,M.Med.Sc(Internal medicine)" },
+            { name: "ဒေါက်တာတင်မာဝေ (သားဖွားနှင့်မီးယပ် အထူးကုဆရာဝန်ကြီး)", specialty: "M.B.,B.S(Ygn)/ M.Med.Sc(O & G)/ Dip.Med.Sc(O & G)" },
+            { name: "ဒေါက်တာဦးအောင်နွဲ့အောင် (သားဖွားမီးယပ် ပါရဂူ)", specialty: "M.B.,B.S/ M.Med.Sc(OG)/ Ph.D(India)" },
+            { name: "ဒေါက်တာခင်သန်းအေး (သားဖွားနှင့်မီးယပ် အထူးကုဆရာဝန်ကြီး)", specialty: "M.B.,B.S/ M.Med.Sc(OG)/ Dip.Med.Sc(OG)" },
+            { name: "ဒေါက်တာသန်းသန်းဝင်း (ကလေး အထူးကုဆရာဝန်ကြီး)", specialty: "M.B.,B.S,Dip.Med.Sc(Child Health)/ M.Med.Sc(Paed)" },
+            { name: "ဒေါက်တာယဉ်ယဉ်ဦး (ကလေး အထူးကုဆရာဝန်)", specialty: "M.B.,B.S,M.Med.Sc(Paed)/ Sr.Consultant Paediatrician" },
+            { name: "ဒေါက်တာစုစုနိုင် (ကလေး အထူးကုဆရာဝန်)", specialty: "M.B.,B.S,M.Med.Sc(Paed)" },
+            { name: "ဒေါက်တာကျော်ဝင်း (စိတ်ကျန်းမာရေး အထူးကုဆရာဝန်ကြီး)", specialty: "M.B.,B.S,D.P.M/ M.B.,B.S(Psy)" },
+            { name: "ဒေါက်တာအောင်ကျော်ဦး (နား၊နှာခေါင်း၊လည်ချောင်း အထူးကုဆရာဝန်ကြီး)", specialty: "M.B.,B.S,M.Med.Sc(ENT)" },
+            { name: "ဒေါက်တာချိုဇင်သွယ် (အရေးပြားရောဂါ အထူးကုဆရာဝန်)", specialty: "M.B.,B.S,M.Med.Sc(Dermatology)" },
+
+        ];
+
+        
+        function renderDoctorList() {
+            var doctorList = document.getElementById("doctor-list");
+
+            doctors.forEach((doctor, index) => {
+                var listItem = document.createElement("li");
+                listItem.innerHTML = `
+                    <strong>${doctor.name}</strong><br>
+                    <span class="specialty">${doctor.specialty}</span><br>
+                    
+                `;
+                doctorList.appendChild(listItem);
+            });
+        }
+
+        
+        renderDoctorList();
+    </script>
+</body>
+</html>
