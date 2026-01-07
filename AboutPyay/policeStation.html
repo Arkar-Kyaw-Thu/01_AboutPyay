@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Police Station</title>
+	<link rel="stylesheet" type="text/css" href="mainPage.css">
+	<style type="text/css">
+		body{
+			background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("blue.jpg");
+			background-size: 100% 100%;
+			background-position: center;
+			backdrop-filter: blur(5px);
+		}
+		.policeMain{
+			border: 1px solid transparent;
+			width: 97%;
+			height: 97%;
+			margin: 0 auto;
+		}
+		.policeMainWp{
+			border: 1px solid transparent;
+			width: 100%;
+			height: 40%;
+			background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("2209_w015_n003_987b_p15_987.jpg");
+			background-size: 100% 100%;
+			background-position: center;
+		}
+		.policeMainWp p{
+			text-align: center;
+			font-size: 30px;
+			text-shadow: 0 0 10px gold;
+			border: 1px solid transparent;
+			margin-top: 6%;
+		}
+		.policeMainMenu{
+			border: 1px solid transparent;
+			width: 100%;
+			height: 60%;
+		}
+		.policeMainMenu .mainMenu{
+			border: 1px solid transparent;
+			list-style: none;
+			width: 100%;
+			height: 15%;
+		}
+		.mainMenu ul li{
+			text-align: center;
+			display: inline-block;
+			border: 1px solid transparent;
+			padding-top: 1.5%;
+			width: 33%;
+			height: 40px;
+			transition: .5s;
+		}
+		.mainMenu ul li:hover {
+			background-color: white;
+			color: black;
+			transition: .5s;
+		}
+	</style>
+</head>
+<body onload="stationOne()">
+	<input type="checkbox" id="check">
+		<label for="check">
+			<div id="btn"><img src="menu.png" width="30px" height="30px"></div>
+			<div id="cancle"><img src="cancle.png" width="30px" height="30px"></div>
+		</label>
+	<div class="sideBar">
+		
+		<header>Menu</header>
+		<div class="menuBar">
+			<ul>
+				<li><a href="mainPage.html">Home</a></li>
+				<li><a href="pyayMapPage.html" id="sideMenu1">Map</a></li>
+				<li><a href="famousPlacePage.html" id="sideMenu2">Famous Place</a></li>
+				<li><a href="restaurantPage.html" id="sideMenu3">Restaurant</a></li>
+				<li><a href="hotelPage.html" id="sideMenu4">Hotel</a></li>
+				<li><a href="hospitalPage.html" id="sideMenu5">Hospital</a></li>
+			</ul>
+		</div>
+		<div class="social">
+			<ul>
+				<li>
+					<a href="#"><img src="facebook.png" width="30px" height="30px"></a>
+					<a href="#"><img src="twitter.png" width="30px" height="30px"></a>
+					<a href="#"><img src="telegram.png" width="30px" height="30px"></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main" id="mainPage">
+		<div class="mainCover">
+			<div class="headBar">
+				<div class="logo">
+				
+				</div>
+				<div class="menu">
+					<ul>
+						<li id="pf" style="display: none;"><a href="#"><img src="profile.png" width="30px" height="30px"></a></a></li>
+						<li id="headMenu1"><a href="loginPage.html">Login</a></li>
+						<li id="headMenu2"><a href="signupPage.html">Signup</a></li>
+						<li><a href="aboutPage.html">About</a></li>
+						<li><a href="emergencyPage.html">SOS</a></li>
+						<li><a href="policeStation.html">Police</a></li>
+						<li><a href="triCyclePage.html">Tricycle</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="policeMain">
+				<div class="policeMainWp">
+					<p>To Serve, Protect And Build Trust</p>
+				</div>
+				<div class="policeMainMenu">
+					<div class="mainMenu">
+						<ul>
+							<li id="one" onclick="stationOne()">No.1 Police Station</li>
+							<li id="two" onclick="stationTwo()">No.2 Police Station</li>
+							<li id="three" onclick="stationThree()">No.3 Police Station</li>
+						</ul>
+					</div>
+					<div id="mainMenuContext">
+						<table align="center" style="text-align: center;">
+							<tr>
+								<td rowspan="4"><img src="" width="800px" height="340px" id="stImage"></td>
+								<td colspan="2"><h1 align="center" id="policeHeader"></h1></td>
+							</tr>
+							<tr>
+								<td>Location :</td>
+								<td id="location"></td>
+							</tr>
+							<tr>
+								<td>Phone :</td>
+								<td id="phone"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		function stationOne(){
+			var img=document.getElementById("stImage");
+			img.src="policeStation1.jpg";
+			var h=document.getElementById("policeHeader");
+			h.innerHTML="No.1 Police Staion";
+			var location=document.getElementById("location");
+			location.innerHTML="near ShweSanDaw Pagoda";
+			var phone=document.getElementById("phone");
+			phone.innerHTML="+95 9 xxxxxxxxx";
+		}
+		function stationTwo(){
+			var img=document.getElementById("stImage");
+			img.src="policeStation2.jpg";
+			var h=document.getElementById("policeHeader");
+			h.innerHTML="No.2 Police Staion";
+			var location=document.getElementById("location");
+			location.innerHTML="ShweTaChaung Road";
+			var phone=document.getElementById("phone");
+			phone.innerHTML="+95 9 xxxxxxxxx";
+		}
+		function stationThree(){
+			var img=document.getElementById("stImage");
+			img.src="policeStation3.jpg";
+			var h=document.getElementById("policeHeader");
+			h.innerHTML="No.3 Police Staion";
+			var location=document.getElementById("location");
+			location.innerHTML="TarGwa Gate";
+			var phone=document.getElementById("phone");
+			phone.innerHTML="+95 9 xxxxxxxxx";
+		}
+
+var btn=document.getElementById("btn");
+btn.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="blur(5px)";
+	document.body.style.backdropFilter="blur(10px)";
+};
+var cancle=document.getElementById("cancle");
+cancle.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="";
+	document.body.style.backdropFilter="";
+};
+
+	if(sessionStorage.length!=0){
+	
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="visible";
+
+
+	var headMenu1=document.getElementById("headMenu1");
+	headMenu1.style.display="none";
+
+	var headMenu2=document.getElementById("headMenu2");
+	headMenu2.style.display="none";
+}
+else{
+
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="hidden";
+
+}
+	</script>
+</body>
+</html>
