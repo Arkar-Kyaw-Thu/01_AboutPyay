@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Police Station</title>
+	<link rel="stylesheet" type="text/css" href="mainPage.css">
+	<style type="text/css">
+.ilBlock{
+		display: inline-block;
+	}
+#ff{
+		margin-bottom: 2%;
+	}
+	
+.m{
+	margin-left: 5%;
+	margin-top: 8%;
+	
+}
+.mca p{
+	line-height: 20px;
+}
+	</style>
+</head>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('aboutWp.jpg'); background-size: 100% 100%; background-position: center;">
+	<input type="checkbox" id="check">
+		<label for="check">
+			<div id="btn"><img src="menu.png" width="30px" height="30px"></div>
+			<div id="cancle"><img src="cancle.png" width="30px" height="30px"></div>
+		</label>
+	<div class="sideBar">
+		
+		<header>Menu</header>
+		<div class="menuBar">
+			<ul>
+				<li><a href="mainPage.html">Home</a></li>
+				<li><a href="pyayMapPage.html" id="sideMenu1">Map</a></li>
+				<li><a href="famousPlacePage.html" id="sideMenu2">Famous Place</a></li>
+				<li><a href="restaurantPage.html" id="sideMenu3">Restaurant</a></li>
+				<li><a href="hotelPage.html" id="sideMenu4">Hotel</a></li>
+				<li><a href="hospitalPage.html" id="sideMenu5">Hospital</a></li>
+			</ul>
+		</div>
+		<div class="social">
+			<ul>
+				<li>
+					<a href="#"><img src="facebook.png" width="30px" height="30px"></a>
+					<a href="#"><img src="twitter.png" width="30px" height="30px"></a>
+					<a href="#"><img src="telegram.png" width="30px" height="30px"></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="main" id="mainPage">
+		<div class="mainCover">
+			<div class="headBar">
+				<div class="logo">
+				
+				</div>
+				<div class="menu">
+					<ul>
+						<li id="pf" style="display: none;"><a href="#"><img src="profile.png" width="30px" height="30px"></a></a></li>
+						<li id="headMenu1"><a href="loginPage.html">Login</a></li>
+						<li id="headMenu2"><a href="signupPage.html">Signup</a></li>
+						<li><a href="aboutPage.html">About</a></li>
+						<li><a href="emergencyPage.html">SOS</a></li>
+						<li><a href="policeStation.html">Police</a></li>
+						<li><a href="triCyclePage.html">Tricycle</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="m">
+				<div class="mca">
+					<h1 id="ff">About</h1>
+					<p id="mcPara">This page is intended to help people who are about to visit Pyay. You can see good restaurant,<br> hotel and famous places to visit in this website. In order to go to that places, the phone number<br> of the taxi has also been shown to this website.You can see  charity associations name and<br> call the number of them when you are in trouble.</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script type="text/javascript">
+	if(sessionStorage.length!=0){
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="visible";
+
+
+	var headMenu1=document.getElementById("headMenu1");
+	headMenu1.style.display="none";
+
+	var headMenu2=document.getElementById("headMenu2");
+	headMenu2.style.display="none";
+}
+else{
+
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="hidden";
+
+}
+
+var btn=document.getElementById("btn");
+btn.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="blur(5px)";
+	document.body.style.backdropFilter="blur(10px)";
+};
+var cancle=document.getElementById("cancle");
+cancle.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="";
+	document.body.style.backdropFilter="";
+};
+	</script>
+</body>
+</html>

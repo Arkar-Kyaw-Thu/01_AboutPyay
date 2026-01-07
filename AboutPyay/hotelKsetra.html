@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MingalarGarden Hotel Page</title>
+	<link rel="stylesheet" type="text/css" href="mainPage.css">
+	<script type="text/javascript" src="mainPage.js"></script>
+	<style type="text/css">
+	.ilBlock{
+		display: inline-block;
+	}
+	</style>
+</head>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('hotelksetra1.jpg');">
+	<input type="checkbox" id="check">
+		<label for="check">
+			<div id="btn"><img src="menu.png" width="30px" height="30px"></div>
+			<div id="cancle"><img src="cancle.png" width="30px" height="30px"></div>
+		</label>
+	<div class="sideBar">
+		
+		<header>Menu</header>
+		<div class="menuBar">
+			<ul>
+				<li><a href="mainPage.html">Home</a></li>
+				<li><a href="pyayMapPage.html" id="sideMenu1">Map</a></li>
+				<li><a href="famousPlacePage.html" id="sideMenu2">Famous Place</a></li>
+				<li><a href="restaurantPage.html" id="sideMenu3">Restaurant</a></li>
+				<li><a href="hotelPage.html" id="sideMenu4">Hotel</a></li>
+				<li><a href="hospitalPage.html" id="sideMenu5">Hospital</a></li>
+			</ul>
+		</div>
+		<div class="social">
+			<ul>
+				<li>
+					<a href="#"><img src="facebook.png" width="30px" height="30px"></a>
+					<a href="#"><img src="twitter.png" width="30px" height="30px"></a>
+					<a href="#"><img src="telegram.png" width="30px" height="30px"></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main" id="mainPage">
+		<div class="mainCover">
+			<div class="headBar">
+				<div class="logo">
+				
+				</div>
+				<div class="menu">
+					<ul>
+						<li id="pf" style="display: none;"><a href="#"><img src="profile.png" width="30px" height="30px"></a></a></li>
+						<li id="headMenu1"><a href="loginPage.html">Login</a></li>
+						<li id="headMenu2"><a href="signupPage.html">Signup</a></li>
+						<li><a href="aboutPage.html">About</a></li>
+						<li><a href="emergencyPage.html">SOS</a></li>
+						<li><a href="policeStation.html">Police</a></li>
+						<li><a href="triCyclePage.html">Tricycle</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="mainPage">
+				<div class="mainSelect">
+					<div class="selectImage"><img src="hotelksetralocation.webp" id="img1" width="100px" height="120px" onclick="showLocation()"></div>
+					<div class="selectImage"><img src="hotelksetra29.jpg" id="img2" width="100px" height="120px" onclick="showDining()"></div>
+					<div class="selectImage"><img src="hotelksetra2.jpg"  id="img3" width="100px" height="120px" onclick="showView()"></div>
+					<div class="selectImage"><img src="hotelksetraroom.jpg" id="img4" width="100px" height="120px" onclick="showRoom()"></div>
+				</div>
+				<div class="mainContext">
+					<div class="mc">
+						<h1 id="mcHead">Hotel Ksetra</h1>
+						<p id="mcPara">Hotel Ksetra is a best choice for travelers visiting Pyay, offering a romantic environment alongside many helpful amenities designed to enhance your stay.
+
+						Hotel Ksetra located Aung San Pyi Thar Yar Street , Aung San Quarter , Pyay.
+						<br>
+						Guest rooms offer air conditioning and a minibar, and Hotel Ksetra makes getting online easy as free wifi is available.</p><br>
+						<div style="background-color: whitesmoke;border-radius: 10px;box-shadow: 0 0 10px seagreen;">
+							<form action="hotelRegisterForm.html">
+								<table cellspacing="10" style="width:100%; padding-left: 30px;">
+									<tr style="width: 230px;height: 100%;color: black;">
+										<td colspan="3">Room Booking</td>
+									</tr>
+									<tr style="width: 230px;height: 100%;padding-left: 30px;">
+										<td><input type="date" id="checkin" placeholder="check in" style="width: 98%;height: 30px;box-shadow: 0 0 10px black;border: none;"></td>
+										<td style="padding-left: 25px;"><input type="date" id="checkout" placeholder="check in" style="width: 98%;height: 30px;box-shadow: 0 0 10px black;border: none;"></td>
+										<td style="padding-left: 25px;color: black;font-size: 12px;box-shadow: 0 0 10px black;" onclick="showUpdateTable()">Guest<br>
+											<span id="mySpan1">0</span> room, <span id="mySpan2">0</span> adult, <span id="mySpan3">0</span> Children
+										</td>
+									</tr>
+									<tr style="width: 230px;height: 100%;">
+										<td colspan="3">
+											<center><input type="submit" value="Booking" style="width: 100px;height: 30px;" onclick="numberRoom()"></center>
+											</td>
+									</tr>
+								</table>
+							</form>
+						</div>
+
+						<div id="myUpdateTable" style="border:1px solid black;width: 40%;border-radius: 10px;box-shadow: 0 0 10px seagreen;float: right; background-color: ghostwhite;color: black; visibility: hidden;">
+							<table style="width:280px;height: 150px;">
+								<tr>
+									<td >Room</td>
+									<td>
+										<div style="border: 1px solid black; width: 188px;height: 30px;">
+										<div class="ilBlock"><input type="button" id="subBtn" value="-" onclick="subRoom()" style="width: 60px; height: 30px;"></div>
+										<div class="ilBlock" id="myNumber" style="width: 59px; height: 30px;text-align: center;">0</div>
+										<div class="ilBlock"><input type="button" id="addBtn" value="+" onclick="addRoom()" style="width: 60px; height: 30px;"></div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>Adults</td>
+									<td>
+										<div style="border: 1px solid black; width: 188px;height: 30px;">
+										<div class="ilBlock"><input type="button" id="subBtn" value="-" onclick="subAdults()" style="width: 60px; height: 30px;"></div>
+										<div class="ilBlock" id="myNumber1" style="width: 59px; height: 30px;text-align: center;">0</div>
+										<div class="ilBlock"><input type="button" id="addBtn" value="+" onclick="addAdults()" style="width: 60px; height: 30px;"></div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>Children</td>
+									<td>
+										<div style="border: 1px solid black; width: 188px;height: 30px;">
+										<div class="ilBlock"><input type="button" id="subBtn" value="-" onclick="subChildren()" style="width: 60px; height: 30px;"></div>
+										<div class="ilBlock" id="myNumber2" style="width: 59px; height: 30px;text-align: center;">0</div>
+										<div class="ilBlock"><input type="button" id="addBtn" value="+" onclick="addChildren()" style="width: 60px; height: 30px;"></div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<center><input type="button" value="Update" style="width: 80%; height: 100%;" onclick="updateData()"></center>
+									</td>
+								</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+var btn=document.getElementById("btn");
+btn.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="blur(5px)";
+	document.body.style.backdropFilter="blur(10px)";
+};
+var cancle=document.getElementById("cancle");
+cancle.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="";
+	document.body.style.backdropFilter="";
+};
+		
+		var img1=document.getElementById("img1");
+		img1.style.borderRadius="10px";
+		img1.style.boxShadow="0px 0px 20px gray";
+
+		var img2=document.getElementById("img2");
+		img2.style.borderRadius="10px";
+		img2.style.boxShadow="0px 0px 20px gray";
+
+		var img3=document.getElementById("img3");
+		img3.style.borderRadius="10px";
+		img3.style.boxShadow="0px 0px 20px gray";
+
+		var img4=document.getElementById("img4");
+		img4.style.borderRadius="10px";
+		img4.style.boxShadow="0px 0px 20px gray";
+
+		function showLocation(){
+			var num=window.open("HotelksetraLocation.html","Location","width=700px,height=400px,left=350px,top=300px");
+		}
+		function showDining(){
+			var num=window.open("HotelksetraDining.html","Location","width=700px,height=400px,left=350px,top=300px");
+		}
+		function showView(){
+			var num=window.open("HotelksetraView.html","Location","width=700px,height=400px,left=350px,top=300px");
+		}
+		function showRoom(){
+			var num=window.open("HotelksetraRoom.html","Location","width=700px,height=400px,left=350px,top=300px");
+		}
+		function numberRoom(){
+			var checkIn=document.getElementById("checkin").value;
+			localStorage.setItem("CheckIn",checkIn);
+
+			var checkOut=document.getElementById("checkout").value;
+			localStorage.setItem("CheckOut",checkOut);
+
+			var room=document.getElementById("mySpan1").innerHTML;
+			localStorage.setItem("Room",room);
+
+			var adults=document.getElementById("mySpan2").innerHTML;
+			localStorage.setItem("Adults",adults);
+
+			var children=document.getElementById("mySpan3").innerHTML;
+			localStorage.setItem("Children",children);
+		}
+
+		function showUpdateTable(){
+			var updateTd=document.getElementById("myUpdateTable");
+			updateTd.style.visibility="visible";
+		}
+
+		function subRoom(){
+			var number=document.getElementById("myNumber").innerHTML;
+			if(number>0){
+				number--;
+			}
+			document.getElementById("myNumber").innerHTML=number;
+		}
+
+		function addRoom(){
+			var number=document.getElementById("myNumber").innerHTML;
+			if(number<10){
+				number++;
+			}
+			document.getElementById("myNumber").innerHTML=number;
+		}
+
+		function subAdults(){
+			var number=document.getElementById("myNumber1").innerHTML;
+			if(number>0){
+				number--;
+			}
+			document.getElementById("myNumber1").innerHTML=number;
+		}
+
+		function addAdults(){
+			var number=document.getElementById("myNumber1").innerHTML;
+			if(number<10){
+				number++;
+			}
+			document.getElementById("myNumber1").innerHTML=number;
+		}
+
+		function subChildren(){
+			var number=document.getElementById("myNumber2").innerHTML;
+			if(number>0){
+				number--;
+			}
+			document.getElementById("myNumber2").innerHTML=number;
+		}
+
+		function addChildren(){
+			var number=document.getElementById("myNumber2").innerHTML;
+			if(number<10){
+				number++;
+			}
+			document.getElementById("myNumber2").innerHTML=number;
+		}
+
+		function updateData(){
+			var number1=document.getElementById("myNumber").innerHTML;
+			var number2=document.getElementById("myNumber1").innerHTML;
+			var number3=document.getElementById("myNumber2").innerHTML;
+
+			document.getElementById("mySpan1").innerHTML=number1;
+			document.getElementById("mySpan2").innerHTML=number2;
+			document.getElementById("mySpan3").innerHTML=number3;
+
+			var updateTd=document.getElementById("myUpdateTable");
+			updateTd.style.visibility="hidden";
+		}
+
+if(sessionStorage.length!=0){
+
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="visible";
+
+
+	var headMenu1=document.getElementById("headMenu1");
+	headMenu1.style.display="none";
+
+	var headMenu2=document.getElementById("headMenu2");
+	headMenu2.style.display="none";
+}
+else{
+
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="hidden";
+
+}
+	</script>
+</body>
+</html>

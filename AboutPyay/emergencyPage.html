@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Police Station</title>
+	<link rel="stylesheet" type="text/css" href="mainPage.css">
+	<style type="text/css">
+		body{
+			background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url("emergencyWp1.jpg");
+			background-size: 100% 100%;
+			background-position: center;
+			backdrop-filter: blur(5px);
+		}
+		.emergencyMain{
+			border: 1px solid transparent;
+			width: 90%;
+			height: 97%;
+			margin: 0 auto;
+		}
+		.emergencyMainWp{
+			border: 1px solid transparent;
+			width: 98%;
+			height: 40%;
+			margin: 0 auto;
+			background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("461803-PFQ5DA-930.jpg");
+			box-shadow: 0 0 10px black;
+			background-size: 100% 100%;
+			background-position: center;
+		}
+		.emergencyMainWp p{
+			text-align: center;
+			font-size: 30px;
+			text-shadow: 0 0 10px gold;
+			border: 1px solid transparent;
+			margin-top: 6%;
+		}
+		.emergencyMainMenu{
+			border: 1px solid transparent;
+			width: 100%;
+			height: 60%;
+		}
+		.ilBlock{
+			display: inline-block;
+			border: 1px solid beige;
+			border-radius: 10px;
+			box-shadow: 0 0 10px black;
+			width: 180px;
+			height: 250px;
+			margin: 2%
+		}
+		
+	</style>
+</head>
+<body onload="stationOne()">
+	<input type="checkbox" id="check">
+		<label for="check">
+			<div id="btn"><img src="menu.png" width="30px" height="30px"></div>
+			<div id="cancle"><img src="cancle.png" width="30px" height="30px"></div>
+		</label>
+	<div class="sideBar">
+		
+		<header>Menu</header>
+		<div class="menuBar">
+			<ul>
+				<li><a href="mainPage.html">Home</a></li>
+				<li><a href="pyayMapPage.html" id="sideMenu1">Map</a></li>
+				<li><a href="famousPlacePage.html" id="sideMenu2">Famous Place</a></li>
+				<li><a href="restaurantPage.html" id="sideMenu3">Restaurant</a></li>
+				<li><a href="hotelPage.html" id="sideMenu4">Hotel</a></li>
+				<li><a href="hospitalPage.html" id="sideMenu5">Hospital</a></li>
+			</ul>
+		</div>
+		<div class="social">
+			<ul>
+				<li>
+					<a href="#"><img src="facebook.png" width="30px" height="30px"></a>
+					<a href="#"><img src="twitter.png" width="30px" height="30px"></a>
+					<a href="#"><img src="telegram.png" width="30px" height="30px"></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main" id="mainPage">
+		<div class="mainCover">
+			<div class="headBar">
+				<div class="logo">
+				
+				</div>
+				<div class="menu">
+					<ul>
+						<li id="pf" style="display: none;"><a href="#"><img src="profile.png" width="30px" height="30px"></a></a></li>
+						<li id="headMenu1"><a href="loginPage.html">Login</a></li>
+						<li id="headMenu2"><a href="signupPage.html">Signup</a></li>
+						<li><a href="aboutPage.html">About</a></li>
+						<li><a href="emergencyPage.html">SOS</a></li>
+						<li><a href="policeStation.html">Police</a></li>
+						<li><a href="triCyclePage.html">Tricycle</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="emergencyMain">
+				<div class="emergencyMainWp">
+					<p></p>
+				</div>
+				<div class="emergencyMainMenu">
+					<center>
+					<div class="ilBlock">
+						<table style="width: 100%;height: 100%;text-align: center;">
+							<tr>
+								<td>
+									<center>
+									<img src="emergency1.jpg" width="100px" height="100px" style="border:1px solid transparent;border-radius: 50%;">
+									</center>
+								</td>
+							</tr>
+							<tr>
+								<td><h4>မြန်မာနိုင်ငံလူမှုကယ်ဆယ်ရေးအဖွဲ -Pyay Rescue</h4></td>
+							</tr>
+							<tr>
+								<td>+95 9453200007</td>
+							</tr>
+						</table>
+					</div>
+					<div class="ilBlock">
+						<table style="width: 100%;height: 100%;text-align: center;">
+							<tr>
+								<td>
+									<center>
+									<img src="emergency2.jpg" width="100px" height="100px" style="border:1px solid transparent;border-radius: 50%;">
+									</center>
+								</td>
+							</tr>
+							<tr>
+								<td><h4>မနုဿမေတ္တာ ရှင်/ကူပရဟိတ လူမှုကူညီရေး</h4></td>
+							</tr>
+							<tr>
+								<td>+95 9427555050</td>
+							</tr>
+						</table>
+					</div>
+					<div class="ilBlock">
+						<table style="width: 100%;height: 100%;text-align: center;">
+							<tr>
+								<td>
+									<center>
+									<img src="emergency3.jpg" width="100px" height="100px" style="border:1px solid transparent;border-radius: 50%;">
+									</center>
+								</td>
+							</tr>
+							<tr>
+								<td><h4>ဒေသတွင်းရေနစ်သူကူညီကယ်ဆယ်ရေးအသင်း</h4></td>
+							</tr>
+							<tr>
+								<td>+95 9423671883</td>
+							</tr>
+						</table>
+					</div>
+					<div class="ilBlock">
+						<table style="width: 100%;height: 100%;text-align: center;">
+							<tr>
+								<td>
+									<center>
+									<img src="emergency4.jpg" width="100px" height="100px" style="border:1px solid transparent;border-radius: 50%;">
+									</center>
+								</td>
+							</tr>
+							<tr>
+								<td><h4>ပစ်တိုင်းထောင် လူမှုကူညီရေးအသင်း ပြည်မြို့</h4></td>
+							</tr>
+							<tr>
+								<td>+95 9253714900</td>
+							</tr>
+						</table>
+					</div>
+					<div class="ilBlock">
+						<table style="width: 100%;height: 100%;text-align: center;">
+							<tr>
+								<td>
+									<center>
+									<img src="emergency5.png" width="100px" height="100px" style="border:1px solid transparent;border-radius: 50%;">
+									</center>
+								</td>
+							</tr>
+							<tr>
+								<td><h4>ကုတင်(၅၀၀) ပြည်သူဆေးရုံကြီး ပြည်မြို့</h4></td>
+							</tr>
+							<tr>
+								<td>+95 9423990323</td>
+							</tr>
+						</table>
+					</div>
+					</center>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+var btn=document.getElementById("btn");
+btn.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="blur(5px)";
+	document.body.style.backdropFilter="blur(10px)";
+};
+var cancle=document.getElementById("cancle");
+cancle.onclick=function(){
+	var main=document.getElementById("mainPage");
+	main.style.filter="";
+	document.body.style.backdropFilter="";
+};
+
+	if(sessionStorage.length!=0){
+	
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="visible";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="visible";
+
+
+	var headMenu1=document.getElementById("headMenu1");
+	headMenu1.style.display="none";
+
+	var headMenu2=document.getElementById("headMenu2");
+	headMenu2.style.display="none";
+}
+else{
+
+	var sideMenu1=document.getElementById("sideMenu3");
+	sideMenu3.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu4");
+	sideMenu4.style.visibility="hidden";
+
+	var sideMenu1=document.getElementById("sideMenu5");
+	sideMenu5.style.visibility="hidden";
+
+}
+	</script>
+</body>
+</html>

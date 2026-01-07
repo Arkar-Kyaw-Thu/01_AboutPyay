@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="mainPage.css">
+	<script type="text/javascript" src="EventUtil.js"></script>
+	<style type="text/css">
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.demo1 {
+  opacity: 0.6;
+}
+
+.active,
+.demo1:hover {
+  opacity: 1;
+}
+.demo2 {
+  opacity: 0.6;
+}
+
+.active,
+.demo2:hover {
+  opacity: 1;
+}
+.demo3 {
+  opacity: 0.6;
+}
+
+.active,
+.demo3:hover {
+  opacity: 1;
+}
+.demo4 {
+  opacity: 0.6;
+}
+
+.active,
+.demo4:hover {
+  opacity: 1;
+}
+.demo5 {
+  opacity: 0.6;
+}
+
+.active,
+.demo5:hover {
+  opacity: 1;
+}
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+		.imgPage{
+			float: right;
+			position: relative;
+			border: 1px solid transparent;
+			width: 15%;
+			height: 87%;
+			margin-right: 1%;
+		}
+		.imgPage .a{
+			display: block;
+			border: 1px solid black;
+			width: 80%;
+			height: 25px;
+			text-align: center;
+			margin-top: 1%;
+			margin-right: auto;
+			margin-bottom: 1%;
+			margin-left: auto;
+		}
+		.imgPage ul li{
+			color: black;
+			background: white;
+			display: block;
+			border: 1px solid black;
+			width: 76%;
+			height: 25px;
+			text-align: center;
+			margin-top: 1%;
+			margin-right: auto;
+			margin-bottom: 1%;
+			margin-left: auto;
+		}
+		.block{
+			display: block;
+			border: 5px solid transparent;
+			position: relative;
+			width: 90%;
+			height: 180px;
+			margin-top: 1%;
+			margin-right: auto;
+			margin-bottom: 1%;
+			margin-left: auto;
+		}
+	</style>
+</head>
+<body style="background: lightblue;" onload="showAll()">
+	<input type="checkbox" id="check">
+		<label for="check">
+			<div id="btn"><img src="menu.png" width="30px" height="30px"></div>
+			<div id="cancle"><img src="cancle.png" width="30px" height="30px"></div>
+		</label>
+	<div class="sideBar">
+		
+		<header>Menu</header>
+		<div class="menuBar">
+			<ul>
+				<li><a href="mainPage.html">Home</a></li>
+				<li><a href="pyayMapPage.html" id="sideMenu1">Map</a></li>
+				<li><a href="famousPlacePage.html" id="sideMenu2">Famous Place</a></li>
+				<li><a href="restaurantPage.html" id="sideMenu3">Restaurant</a></li>
+				<li><a href="hotelPage.html" id="sideMenu4">Hotel</a></li>
+				<li><a href="hospitalPage.html" id="sideMenu5">Hospital</a></li>
+			</ul>
+		</div>
+		<div class="social">
+			<ul>
+				<li>
+					<a href="#"><img src="facebook.png" width="30px" height="30px"></a>
+					<a href="#"><img src="twitter.png" width="30px" height="30px"></a>
+					<a href="#"><img src="telegram.png" width="30px" height="30px"></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main" id="mainPage">
+		<div class="mainCover">
+			<div class="headBar">
+				<div class="logo">
+				
+				</div>
+				<div class="menu">
+					<ul>
+						<li id="pf" style="display: none;"><a href="#"><img src="profile.png" width="30px" height="30px"></a></a></li>
+						<li id="headMenu1"><a href="loginPage.html">Login</a></li>
+						<li id="headMenu2"><a href="signupPage.html">Signup</a></li>
+						<li><a href="aboutPage.html">About</a></li>
+						<li><a href="emergencyPage.html">SOS</a></li>
+						<li><a href="policeStation.html">Police</a></li>
+						<li><a href="triCyclePage.html">Tricycle</a></li>
+					</ul>
+				</div>
+			</div>
+
+		<div>
+			<div style="width: 100%;position: absolute;">
+				<br>
+				<div class="block" id="pagoda">
+<div class="row">
+  <div class="column">
+    <img src="shwesandawWp.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="shweBhoneThar.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="aungMyintVaHu.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="bodhiTaHtaung.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 24</div>
+      <img src="shwesandawWp.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 24</div>
+      <img src="shweBhoneThar.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 24</div>
+      <img src="aungMyintVaHu.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 24</div>
+      <img src="bodhiTaHtaung.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption" style="font-size: 25px;"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="shwesandawWp.jpg" style="width:100%" onclick="currentSlide(1)" alt="ShweSanDaw Pagoda Location: Middle of city">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="shweBhoneThar.jpg" style="width:100%" onclick="currentSlide(2)" alt="ShweBhoneThar Pagoda Location: Phataung Township, on the other side of  the Pyay">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="aungMyintVaHu.jpg" style="width:100%" onclick="currentSlide(3)" alt="AungMyintVaHu Pagoda Location: about 4.6 miles form ShweTaGar Ward">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="bodhiTaHtaung.jpg" style="width:100%" onclick="currentSlide(4)" alt="BodhiTaHtaung Pagoda Location: Phataung Township, on the other side of  the Pyay">
+    </div>
+  </div>
+</div>
+				</div>
+				<div class="block" id="park">
+<div class="row">
+  <div class="column">
+    <img src="park1.jpg" style="width:100%" onclick="openModal1();currentSlide1(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="park2.jfif" style="width:100%" onclick="openModal1();currentSlide1(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="park3.jpg" style="width:100%" onclick="openModal1();currentSlide1(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="park4.jpg" style="width:100%" onclick="openModal1();currentSlide1(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal1" class="modal">
+  <span class="close cursor" onclick="closeModal1()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides1">
+      <div class="numbertext">5 / 24</div>
+      <img src="park1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides1">
+      <div class="numbertext">6 / 24</div>
+      <img src="park2.jfif" style="width:100%;height:100%">
+    </div>
+
+    <div class="mySlides1">
+      <div class="numbertext">7 / 24</div>
+      <img src="park3.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides1">
+      <div class="numbertext">8 / 24</div>
+      <img src="park4.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides1(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption1"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo1 cursor" src="park1.jpg" style="width:100%" onclick="currentSlide1(1)" alt="Waterfront Park Location: KyaungKyeeAeoTaann ward">
+    </div>
+    <div class="column">
+      <img class="demo1 cursor" src="park2.jfif" style="width:100%" onclick="currentSlide1(2)" alt="MuyarPang Park ParLocation: ManAungPout">
+    </div>
+    <div class="column">
+      <img class="demo1 cursor" src="park3.jpg" style="width:100%" onclick="currentSlide1(3)" alt="WaterBank Location: on the bank of the Irrawady river in PhaTaung Township">
+    </div>
+    <div class="column">
+      <img class="demo1 cursor" src="park4.jpg" style="width:100%" onclick="currentSlide1(4)" alt="GoGoPlay Location: UWinMaung SanSat Street">
+    </div>
+  </div>
+</div>
+				</div>
+			<div class="block" id="market">
+<div class="row">
+  <div class="column">
+    <img src="market1.jpg" style="width:100%" onclick="openModal2();currentSlide2(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="market2.jpg" style="width:100%" onclick="openModal2();currentSlide2(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="market3.jpg" style="width:100%" onclick="openModal2();currentSlide2(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="market4.jpg" style="width:100%" onclick="openModal2();currentSlide2(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal2" class="modal">
+  <span class="close cursor" onclick="closeModal2()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides2">
+      <div class="numbertext">9 / 24</div>
+      <img src="market1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides2">
+      <div class="numbertext">10 / 24</div>
+      <img src="market2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides2">
+      <div class="numbertext">11 / 24</div>
+      <img src="market3.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides2">
+      <div class="numbertext">12 / 24</div>
+      <img src="market4.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption2"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo2 cursor" src="market1.jpg" style="width:100%" onclick="currentSlide2(1)" alt="Municipal Market Location: KyaungKyee Aoe Taann Ward">
+    </div>
+    <div class="column">
+      <img class="demo2 cursor" src="market2.jpg" style="width:100%" onclick="currentSlide2(2)" alt="Grad & Go Market Location: Targway">
+    </div>
+    <div class="column">
+      <img class="demo2 cursor" src="market3.jpg" style="width:100%" onclick="currentSlide2(3)" alt="Shar Mee Market Location: Ksetra MyotThit">
+    </div>
+    <div class="column">
+      <img class="demo2 cursor" src="market4.jpg" style="width:100%" onclick="currentSlide2(4)" alt="ShweMinTaMe Market Location: corner of Lann Ma Taw Road and Chinatown Road, Pyay">
+    </div>
+  </div>
+</div>
+				</div>
+		<div class="block" id="restaurant">
+<div class="row">
+  <div class="column">
+    <img src="restaurant1.jpg" style="width:100%" onclick="openModal3();currentSlide3(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="restaurant2.jpg" style="width:100%" onclick="openModal3();currentSlide3(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="restaurant3.jpg" style="width:100%" onclick="openModal3();currentSlide3(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="restaurant4.jpg" style="width:100%" onclick="openModal3();currentSlide3(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal3" class="modal">
+  <span class="close cursor" onclick="closeModal3()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides3">
+      <div class="numbertext">13 / 24</div>
+      <img src="restaurant1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides3">
+      <div class="numbertext">14 / 24</div>
+      <img src="restaurant2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides3">
+      <div class="numbertext">15 / 24</div>
+      <img src="restaurant3.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides3">
+      <div class="numbertext">16 / 24</div>
+      <img src="restaurant4.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption3"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo3 cursor" src="restaurant1.jpg" style="width:100%" onclick="currentSlide3(1)" alt="SpicyKing Restaurant Location: Pyay-AungLan Road">
+    </div>
+    <div class="column">
+      <img class="demo3 cursor" src="restaurant2.jpg" style="width:100%" onclick="currentSlide3(2)" alt="Emperor-9 Restaurant Location: near sweet golden lan hotel, MinGyiTaung land">
+    </div>
+    <div class="column">
+      <img class="demo3 cursor" src="restaurant3.jpg" style="width:100%" onclick="currentSlide3(3)" alt="AMaYa Restaurant Location: KyaungTawKyee Street">
+    </div>
+    <div class="column">
+      <img class="demo3 cursor" src="restaurant4.jpg" style="width:100%" onclick="currentSlide3(4)" alt="August Restaurant Location: PaYaGyi Ward">
+    </div>
+  </div>
+</div>
+				</div>
+			<div class="block" id="sriksetra">
+<div class="row">
+  <div class="column">
+    <img src="paYaGyi.jpg" style="width:100%" onclick="openModal4();currentSlide4(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="bawBawGyi.jpg" style="width:100%" onclick="openModal4();currentSlide4(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="YahandaKan.jpg" style="width:100%" onclick="openModal4();currentSlide4(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="thonePanHla.jpg" style="width:100%" onclick="openModal4();currentSlide4(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal4" class="modal">
+  <span class="close cursor" onclick="closeModal4()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides4">
+      <div class="numbertext">17 / 24</div>
+      <img src="paYaGyi.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides4">
+      <div class="numbertext">18 / 24</div>
+      <img src="bawBawGyi.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides4">
+      <div class="numbertext">19 / 24</div>
+      <img src="YahandaKan.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides4">
+      <div class="numbertext">20 / 24</div>
+      <img src="thonePanHla.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides4(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides4(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption4"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo4 cursor" src="paYaGyi.jpg" style="width:100%" onclick="currentSlide4(1)" alt="PaYaGyi Location: Ksetra MyotThit ,Pyay-AungLan Road">
+    </div>
+    <div class="column">
+      <img class="demo4 cursor" src="bawBawGyi.jpg" style="width:100%" onclick="currentSlide4(2)" alt="BawBawGyi Location: about 5 miles east of Pyay">
+    </div>
+    <div class="column">
+      <img class="demo4 cursor" src="YahandaKan.jpg" style="width:100%" onclick="currentSlide4(3)" alt="YahandaKan Location: Acient City Pyu">
+    </div>
+    <div class="column">
+      <img class="demo4 cursor" src="thonePanHla.jpg" style="width:100%" onclick="currentSlide4(4)" alt="ThonePanHla Location: about 5 miles east of Pyay">
+    </div>
+  </div>
+</div>
+				</div>
+				<div class="block" id="other">
+<div class="row">
+  <div class="column">
+    <img src="minGyiTaung.jpg" style="width:100%" onclick="openModal5();currentSlide5(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="PhyoeOoTaung.jpg" style="width:100%" onclick="openModal5();currentSlide5(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="naWaDayBridgeWp.jpg" style="width:100%" onclick="openModal5();currentSlide5(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="elephantCamp.jpg" style="width:100%" onclick="openModal5();currentSlide5(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal5" class="modal">
+  <span class="close cursor" onclick="closeModal5()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides5">
+      <div class="numbertext">21 / 24</div>
+      <img src="minGyiTaung.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides5">
+      <div class="numbertext">22 / 24</div>
+      <img src="PhyoeOoTaung.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides5">
+      <div class="numbertext">23 / 24</div>
+      <img src="naWaDayBridgeWp.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides5">
+      <div class="numbertext">24 / 24</div>
+      <img src="elephantCamp.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides5(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides5(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption5"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo5 cursor" src="minGyiTaung.jpg" style="width:100%" onclick="currentSlide5(1)" alt="MinGyiTaung Location: northWest of Pyay">
+    </div>
+    <div class="column">
+      <img class="demo5 cursor" src="PhyoeOoTaung.jpg" style="width:100%" onclick="currentSlide5(2)" alt="PhoeOoTaung Location: Phataung Township, on the other side of  the Pyay">
+    </div>
+    <div class="column">
+      <img class="demo5 cursor" src="naWaDayBridgeWp.jpg" style="width:100%" onclick="currentSlide5(3)" alt="Nawaday Bridge Location: Between two township of Pyay and Padaung">
+    </div>
+    <div class="column">
+      <img class="demo5 cursor" src="elephantCamp.jpg" style="width:100%" onclick="currentSlide5(4)" alt="Elephant Camp Location: Between Pyay and ShweTaung">
+    </div>
+  </div>
+</div>
+				</div>-->
+
+			</div>
+				
+			</div>
+				<div class="imgPage">
+					<div class="a" id="myDivmenu">Menu</div>
+					<br>
+					<ul id="myMenu" style="display: none;">
+						<li onclick="showAll()">all</li>
+						<li onclick="showPagoda()">Pagoda</li>
+						<li onclick="showPark()">Park</li>
+						<li onclick="showMarket()">Market</li>
+						<li onclick="showRestaurant()">Restaurant</li>
+						<li onclick="showSriKsetra()">Sri Ksetra</li>
+						<li onclick="showOther()">Other</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		EventUtil.addHandler(window,"load",function(event){
+			var div=document.getElementById("myDivmenu");
+			EventUtil.addHandler(div,"contextmenu",function(event){
+				event=EventUtil.getEvent(event);
+				EventUtil.preventDefault(event);
+				var menu=document.getElementById("myMenu");
+				menu.style.left=event.clientX+"px";
+				menu.style.top=event.clientY+"px";
+				menu.style.display="";
+			});
+			EventUtil.addHandler(document,"click",function(event){
+				document.getElementById("myMenu").style.display="none";
+			});
+		});
+
+		function showAll(){
+			document.getElementById("pagoda").style.display="";
+			document.getElementById("park").style.display="";
+			document.getElementById("market").style.display="";
+			document.getElementById("restaurant").style.display="";
+			document.getElementById("sriksetra").style.display="";
+			document.getElementById("other").style.display="";
+		}
+
+		function showPagoda(){
+			document.getElementById("pagoda").style.display="";
+			document.getElementById("park").style.display="none";
+			document.getElementById("market").style.display="none";
+			document.getElementById("restaurant").style.display="none";
+			document.getElementById("sriksetra").style.display="none";
+			document.getElementById("other").style.display="none";
+		}
+
+		function showPark(){
+			document.getElementById("pagoda").style.display="none";
+			document.getElementById("park").style.display="";
+			document.getElementById("market").style.display="none";
+			document.getElementById("restaurant").style.display="none";
+			document.getElementById("sriksetra").style.display="none";
+			document.getElementById("other").style.display="none";
+		}
+
+		function showMarket(){
+			document.getElementById("pagoda").style.display="none";
+			document.getElementById("park").style.display="none";
+			document.getElementById("market").style.display="";
+			document.getElementById("restaurant").style.display="none";
+			document.getElementById("sriksetra").style.display="none";
+			document.getElementById("other").style.display="none";
+		}
+
+		function showRestaurant(){
+			document.getElementById("pagoda").style.display="none";
+			document.getElementById("park").style.display="none";
+			document.getElementById("market").style.display="none";
+			document.getElementById("restaurant").style.display="";
+			document.getElementById("sriksetra").style.display="none";
+			document.getElementById("other").style.display="none";
+		}
+
+		function showSriKsetra(){
+			document.getElementById("pagoda").style.display="none";
+			document.getElementById("park").style.display="none";
+			document.getElementById("market").style.display="none";
+			document.getElementById("restaurant").style.display="none";
+			document.getElementById("sriksetra").style.display="";
+			document.getElementById("other").style.display="none";
+		}
+
+		function showOther(){
+			document.getElementById("pagoda").style.display="none";
+			document.getElementById("park").style.display="none";
+			document.getElementById("market").style.display="none";
+			document.getElementById("restaurant").style.display="none";
+			document.getElementById("sriksetra").style.display="none";
+			document.getElementById("other").style.display="";
+		}
+    
+var btn=document.getElementById("btn");
+btn.onclick=function(){
+  var main=document.getElementById("mainPage");
+  main.style.filter="blur(5px)";
+  document.body.style.backdropFilter="blur(10px)";
+};
+var cancle=document.getElementById("cancle");
+cancle.onclick=function(){
+  var main=document.getElementById("mainPage");
+  main.style.filter="";
+  document.body.style.backdropFilter="";
+};
+
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+//******0*******
+function openModal1() {
+  document.getElementById("myModal1").style.display = "block";
+}
+
+function closeModal1() {
+  document.getElementById("myModal1").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides1(slideIndex);
+
+function plusSlides1(n) {
+  showSlides1(slideIndex += n);
+}
+
+function currentSlide1(n) {
+  showSlides1(slideIndex = n);
+}
+
+function showSlides1(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides1");
+  var dots = document.getElementsByClassName("demo1");
+  var captionText = document.getElementById("caption1");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+//******1*******
+
+function openModal2() {
+  document.getElementById("myModal2").style.display = "block";
+}
+
+function closeModal2() {
+  document.getElementById("myModal2").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides2(slideIndex);
+
+function plusSlides2(n) {
+  showSlides2(slideIndex += n);
+}
+
+function currentSlide2(n) {
+  showSlides2(slideIndex = n);
+}
+
+function showSlides2(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides2");
+  var dots = document.getElementsByClassName("demo2");
+  var captionText = document.getElementById("caption2");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+//******2*******
+
+function openModal3() {
+  document.getElementById("myModal3").style.display = "block";
+}
+
+function closeModal3() {
+  document.getElementById("myModal3").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides3(slideIndex);
+
+function plusSlides3(n) {
+  showSlides3(slideIndex += n);
+}
+
+function currentSlide3(n) {
+  showSlides3(slideIndex = n);
+}
+
+function showSlides3(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides3");
+  var dots = document.getElementsByClassName("demo3");
+  var captionText = document.getElementById("caption3");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+//******3*******
+
+function openModal4() {
+  document.getElementById("myModal4").style.display = "block";
+}
+
+function closeModal4() {
+  document.getElementById("myModal4").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides4(slideIndex);
+
+function plusSlides4(n) {
+  showSlides4(slideIndex += n);
+}
+
+function currentSlide4(n) {
+  showSlides4(slideIndex = n);
+}
+
+function showSlides4(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides4");
+  var dots = document.getElementsByClassName("demo4");
+  var captionText = document.getElementById("caption4");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+//******4*******
+
+function openModal5() {
+  document.getElementById("myModal5").style.display = "block";
+}
+
+function closeModal5() {
+  document.getElementById("myModal5").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides5(slideIndex);
+
+function plusSlides5(n) {
+  showSlides5(slideIndex += n);
+}
+
+function currentSlide5(n) {
+  showSlides5(slideIndex = n);
+}
+
+function showSlides5(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides5");
+  var dots = document.getElementsByClassName("demo5");
+  var captionText = document.getElementById("caption5");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+//******5*******
+
+if(sessionStorage.length!=0){
+  var sideMenu1=document.getElementById("sideMenu3");
+  sideMenu3.style.visibility="visible";
+
+  var sideMenu1=document.getElementById("sideMenu4");
+  sideMenu4.style.visibility="visible";
+
+  var sideMenu1=document.getElementById("sideMenu5");
+  sideMenu5.style.visibility="visible";
+
+
+  var headMenu1=document.getElementById("headMenu1");
+  headMenu1.style.display="none";
+
+  var headMenu2=document.getElementById("headMenu2");
+  headMenu2.style.display="none";
+}
+else{
+  
+  var sideMenu1=document.getElementById("sideMenu3");
+  sideMenu3.style.visibility="hidden";
+
+  var sideMenu1=document.getElementById("sideMenu4");
+  sideMenu4.style.visibility="hidden";
+
+  var sideMenu1=document.getElementById("sideMenu5");
+  sideMenu5.style.visibility="hidden";
+
+}
+
+	</script>
+</body>
+</html>
